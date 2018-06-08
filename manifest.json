@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+
+  "name": "右键识别二维码",
+  "description": "右键识别二维码Chrome浏览器插件",
+  "icons": {
+    "128": "/source/images/icons/128.png",
+    "16": "/source/images/icons/16.png"
+  },
+  "options_page": "options.html",
+  "version": "1.0",
+  "omnibox": {
+    "keyword": "aoc"
+  },
+  "content_security_policy": "script-src 'self' https://unpkg.com; object-src 'self'",
+  "background": {
+    "scripts": [
+      "background.js",
+      "/source/js/sample.js",
+      "/source/js/axios.min.js",
+      "/source/js/qrcode/qrcode.js",
+      "/source/js/qrcode/qrcode_UTF8.js",
+      "/source/js/qrcode/jsqrcode.min.js"
+    ]
+  },
+  "permissions": [
+    "contextMenus",
+    "cookies",
+    "notifications",
+    "<all_urls>"
+  ],
+  "browser_action": {
+    "default_icon": "source/images/icons/icon.png",
+    "default_popup": "popup.html"
+  }
+}
